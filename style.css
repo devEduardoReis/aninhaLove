@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+  color: #4b0082;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 500px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.memorial {
+  padding: 30px;
+  animation: fadeIn 2s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.altar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  gap: 20px;
+  position: relative;
+}
+
+.vela {
+  width: 30px;
+  height: 100px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+.vela::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 25px;
+  background: radial-gradient(circle, #ff0, #f90, #f00);
+  border-radius: 50%;
+  animation: flame 1s infinite alternate;
+}
+
+@keyframes flame {
+  0% { transform: translateX(-50%) scaleY(1); }
+  100% { transform: translateX(-50%) scaleY(1.2); }
+}
+
+.altar-corpo h1 {
+  font-size: 32px;
+  color: #d10068;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
