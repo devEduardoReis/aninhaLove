@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para a mais linda 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Música de fundo -->
+  <audio id="bgMusic" autoplay loop muted>
+    <source src="assets/idiota-jao.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ── QUIZ ── -->
+  <div class="container" id="quizContainer">
+    <h1>Para a mais linda 💖</h1>
+    <p id="question"></p>
+    <div id="answers"></div>
+  </div>
+
+  <!-- ── MEMORIAL / LIVRO ── -->
+  <div class="memorial hidden" id="memorial">
+    <h1 class="memorial-title">Altar da onça pintuda & professor linguiça 💘</h1>
+
+    <!-- Livro -->
+    <div class="book-wrapper">
+      <div id="book"></div>
+    </div>
+
+    <!-- Controles de navegação -->
+    <div class="nav-controls">
+      <button class="nav-btn" id="btnPrev" onclick="goToPage(currentPage - 1, 'prev')" disabled>&#8592;</button>
+      <span class="page-indicator" id="pageIndicator">1 / 1</span>
+      <button class="nav-btn" id="btnNext" onclick="goToPage(currentPage + 1, 'next')">&#8594;</button>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots" id="dots"></div>
+
+    <!-- Dica de swipe (some depois do primeiro uso) -->
+    <p class="swipe-hint" id="swipeHint">&#8592; desliza o dedin &#8594;</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
